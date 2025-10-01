@@ -8,6 +8,9 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import LoanCalculator from "@/pages/LoanCalculator";
 import JsonFormatter from "@/pages/JsonFormatter";
+import AboutUs from "@/pages/AboutUs";
+import Contact from "@/pages/Contact";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
 
 function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<"light" | "dark">(() => {
@@ -37,6 +40,9 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/tools/loan-calculator" component={LoanCalculator} />
       <Route path="/tools/json-formatter" component={JsonFormatter} />
+      <Route path="/about" component={AboutUs} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route component={NotFound} />
     </Switch>
   );

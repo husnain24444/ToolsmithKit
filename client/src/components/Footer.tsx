@@ -92,14 +92,18 @@ export default function Footer() {
             <h4 className="font-semibold text-foreground mb-4">Company</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-about">
-                  About Us
-                </a>
+                <Link href="/about">
+                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer" data-testid="link-about">
+                    About Us
+                  </span>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-privacy">
-                  Privacy Policy
-                </a>
+                <Link href="/privacy-policy">
+                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer" data-testid="link-privacy">
+                    Privacy Policy
+                  </span>
+                </Link>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-terms">
@@ -107,9 +111,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-contact">
-                  Contact
-                </a>
+                <Link href="/contact">
+                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer" data-testid="link-contact">
+                    Contact
+                  </span>
+                </Link>
               </li>
             </ul>
           </div>
