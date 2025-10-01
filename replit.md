@@ -8,6 +8,22 @@ ToolsHub is a web-based platform providing free online utility tools for finance
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes
+
+### October 1, 2025 - Email Integration & Legal Pages
+- **Email Functionality**: Implemented Nodemailer for contact form email sending
+  - Uses Gmail SMTP with app password authentication
+  - Environment variables: `EMAIL_USER` and `EMAIL_APP_PASSWORD`
+  - Contact form now sends emails to husnainofficial0314@gmail.com
+  - Backend endpoint: `/api/contact` with validation using Zod
+- **New Pages Added**:
+  - About Us (`/about`) - Company information and mission
+  - Contact (`/contact`) - Contact form with email integration
+  - Privacy Policy (`/privacy-policy`) - Comprehensive privacy policy
+  - Terms of Service (`/terms-of-service`) - Legal terms and conditions
+- **Footer Updated**: Added navigation links to all legal pages
+- **Note**: User declined Resend integration in favor of direct Gmail SMTP
+
 ## System Architecture
 
 ### Frontend Architecture
