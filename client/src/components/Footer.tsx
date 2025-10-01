@@ -106,9 +106,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-terms">
-                  Terms of Service
-                </a>
+                <Link href="/terms-of-service">
+                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer" data-testid="link-terms">
+                    Terms of Service
+                  </span>
+                </Link>
               </li>
               <li>
                 <Link href="/contact">

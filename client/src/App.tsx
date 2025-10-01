@@ -11,6 +11,7 @@ import JsonFormatter from "@/pages/JsonFormatter";
 import AboutUs from "@/pages/AboutUs";
 import Contact from "@/pages/Contact";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import TermsOfService from "@/pages/TermsOfService";
 
 function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<"light" | "dark">(() => {
@@ -43,6 +44,7 @@ function Router() {
       <Route path="/about" component={AboutUs} />
       <Route path="/contact" component={Contact} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
+      <Route path="/terms-of-service" component={TermsOfService} />
       <Route component={NotFound} />
     </Switch>
   );
