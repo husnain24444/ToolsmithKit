@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "wouter";
-import { DollarSign, Code2, Zap, CheckCircle, Smartphone, Package } from "lucide-react";
+import { DollarSign, Code2, Zap, CheckCircle, Smartphone, Package, TrendingUp, Hash, Key } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AdPlaceholder from "@/components/AdPlaceholder";
@@ -81,46 +81,110 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Loan Calculator Card */}
-            <Card className="p-8 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center mb-6">
-                <div className="bg-primary/10 dark:bg-primary/20 p-3 rounded-lg mr-4">
-                  <DollarSign className="w-8 h-8 text-primary dark:text-primary" />
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-foreground dark:text-foreground mb-6">Finance Tools</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* EMI Calculator Card */}
+              <Card className="p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-primary/10 dark:bg-primary/20 p-2 rounded-lg mr-3">
+                    <DollarSign className="w-6 h-6 text-primary dark:text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground dark:text-foreground">EMI Calculator</h3>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground dark:text-foreground">EMI/Loan Calculator</h3>
-                  <p className="text-muted-foreground dark:text-muted-foreground">Calculate monthly payments and interest breakdown</p>
-                </div>
-              </div>
-              <p className="text-muted-foreground dark:text-muted-foreground mb-6">
-                Get instant EMI calculations with detailed breakdowns of principal and interest. View interactive charts
-                and download comprehensive amortization schedules.
-              </p>
-              <Button asChild className="w-full" data-testid="button-open-loan-calculator">
-                <Link href="/tools/loan-calculator">Open Full Calculator →</Link>
-              </Button>
-            </Card>
+                <p className="text-sm text-muted-foreground dark:text-muted-foreground mb-4">
+                  Calculate monthly loan payments with detailed interest breakdown and amortization schedule.
+                </p>
+                <Button asChild className="w-full" size="sm" data-testid="button-open-loan-calculator">
+                  <Link href="/tools/loan-calculator">Open Calculator →</Link>
+                </Button>
+              </Card>
 
-            {/* JSON Formatter Card */}
-            <Card className="p-8 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center mb-6">
-                <div className="bg-accent/10 dark:bg-accent/20 p-3 rounded-lg mr-4">
-                  <Code2 className="w-8 h-8 text-accent dark:text-accent" />
+              {/* Compound Interest Calculator Card */}
+              <Card className="p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-primary/10 dark:bg-primary/20 p-2 rounded-lg mr-3">
+                    <TrendingUp className="w-6 h-6 text-primary dark:text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground dark:text-foreground">Compound Interest</h3>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground dark:text-foreground">JSON Formatter & Validator</h3>
-                  <p className="text-muted-foreground dark:text-muted-foreground">Format, validate, and beautify JSON data</p>
+                <p className="text-sm text-muted-foreground dark:text-muted-foreground mb-4">
+                  Calculate investment growth with different compounding frequencies and visualize returns.
+                </p>
+                <Button asChild className="w-full" size="sm" data-testid="button-open-compound-calculator">
+                  <Link href="/tools/compound-interest">Open Calculator →</Link>
+                </Button>
+              </Card>
+
+              {/* ROI Calculator Card */}
+              <Card className="p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-primary/10 dark:bg-primary/20 p-2 rounded-lg mr-3">
+                    <TrendingUp className="w-6 h-6 text-primary dark:text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground dark:text-foreground">ROI Calculator</h3>
                 </div>
-              </div>
-              <p className="text-muted-foreground dark:text-muted-foreground mb-6">
-                Format and validate JSON with syntax highlighting, error detection, and one-click copy/download.
-                All processing happens locally in your browser.
-              </p>
-              <Button asChild className="w-full" data-testid="button-open-json-formatter">
-                <Link href="/tools/json-formatter">Open Full Formatter →</Link>
-              </Button>
-            </Card>
+                <p className="text-sm text-muted-foreground dark:text-muted-foreground mb-4">
+                  Measure investment performance and calculate return on investment with ease.
+                </p>
+                <Button asChild className="w-full" size="sm" data-testid="button-open-roi-calculator">
+                  <Link href="/tools/roi-calculator">Open Calculator →</Link>
+                </Button>
+              </Card>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-bold text-foreground dark:text-foreground mb-6">Developer Tools</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* JSON Formatter Card */}
+              <Card className="p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-accent/10 dark:bg-accent/20 p-2 rounded-lg mr-3">
+                    <Code2 className="w-6 h-6 text-accent dark:text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground dark:text-foreground">JSON Formatter</h3>
+                </div>
+                <p className="text-sm text-muted-foreground dark:text-muted-foreground mb-4">
+                  Format, validate, and beautify JSON with syntax highlighting and error detection.
+                </p>
+                <Button asChild className="w-full" size="sm" data-testid="button-open-json-formatter">
+                  <Link href="/tools/json-formatter">Open Formatter →</Link>
+                </Button>
+              </Card>
+
+              {/* Base64 Tool Card */}
+              <Card className="p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-accent/10 dark:bg-accent/20 p-2 rounded-lg mr-3">
+                    <Key className="w-6 h-6 text-accent dark:text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground dark:text-foreground">Base64 Tool</h3>
+                </div>
+                <p className="text-sm text-muted-foreground dark:text-muted-foreground mb-4">
+                  Encode and decode Base64 strings with support for file upload and download.
+                </p>
+                <Button asChild className="w-full" size="sm" data-testid="button-open-base64">
+                  <Link href="/tools/base64">Open Tool →</Link>
+                </Button>
+              </Card>
+
+              {/* Hash Generator Card */}
+              <Card className="p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-accent/10 dark:bg-accent/20 p-2 rounded-lg mr-3">
+                    <Hash className="w-6 h-6 text-accent dark:text-accent" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground dark:text-foreground">Hash Generator</h3>
+                </div>
+                <p className="text-sm text-muted-foreground dark:text-muted-foreground mb-4">
+                  Generate SHA-1, SHA-256, SHA-384, and SHA-512 hashes for any text input.
+                </p>
+                <Button asChild className="w-full" size="sm" data-testid="button-open-hash-generator">
+                  <Link href="/tools/hash-generator">Open Generator →</Link>
+                </Button>
+              </Card>
+            </div>
           </div>
         </div>
       </section>

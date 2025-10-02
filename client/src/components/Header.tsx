@@ -1,5 +1,5 @@
 import { Link, useLocation } from "wouter";
-import { Moon, Sun, Menu } from "lucide-react";
+import { Moon, Sun, Menu, ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -7,6 +7,14 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 export default function Header() {
   const [location] = useLocation();
@@ -28,10 +36,16 @@ export default function Header() {
     setTheme(theme === "light" ? "dark" : "light");
   };
 
-  const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/tools/loan-calculator", label: "Finance Tools" },
-    { href: "/tools/json-formatter", label: "Developer Tools" },
+  const financeTools = [
+    { href: "/tools/loan-calculator", label: "EMI / Loan Calculator" },
+    { href: "/tools/compound-interest", label: "Compound Interest Calculator" },
+    { href: "/tools/roi-calculator", label: "ROI Calculator" },
+  ];
+
+  const developerTools = [
+    { href: "/tools/json-formatter", label: "JSON Formatter" },
+    { href: "/tools/base64", label: "Base64 Encoder/Decoder" },
+    { href: "/tools/hash-generator", label: "Hash Generator" },
   ];
 
   return (
@@ -44,21 +58,97 @@ export default function Header() {
                 ToolsHub
               </h1>
             </Link>
-            <div className="hidden md:flex space-x-6">
-              {navItems.map((item) => (
-                <Link key={item.href} href={item.href}>
-                  <span
-                    className={`transition-colors cursor-pointer ${
-                      location === item.href
-                        ? "text-foreground font-medium"
-                        : "text-muted-foreground hover:text-foreground"
-                    }`}
-                    data-testid={`nav-${item.label.toLowerCase().replace(/\s+/g, "-")}`}
-                  >
-                    {item.label}
-                  </span>
-                </Link>
-              ))}
+            <div className="hidden md:flex items-center space-x-6">
+              <Link href="/">
+                <span
+                  className={`transition-colors cursor-pointer ${
+                    location === "/"
+                      ? "text-foreground font-medium"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                  data-testid="nav-home"
+                >
+                  Home
+                </span>
+              </Link>
+
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="text-muted-foreground hover:text-foreground" data-testid="nav-finance-tools">
+                      Finance Tools
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="grid w-[400px] gap-3 p-4">
+                        {financeTools.map((tool) => (
+                          <li key={tool.href}>
+                            <NavigationMenuLink asChild>
+                              <Link href={tool.href}>
+                                <span 
+                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer"
+                                  data-testid={`link-finance-${tool.href.split('/').pop()}`}
+                                >
+                                  <div className="text-sm font-medium leading-none">{tool.label}</div>
+                                </span>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="text-muted-foreground hover:text-foreground" data-testid="nav-developer-tools">
+                      Developer Tools
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="grid w-[400px] gap-3 p-4">
+                        {developerTools.map((tool) => (
+                          <li key={tool.href}>
+                            <NavigationMenuLink asChild>
+                              <Link href={tool.href}>
+                                <span 
+                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer"
+                                  data-testid={`link-developer-${tool.href.split('/').pop()}`}
+                                >
+                                  <div className="text-sm font-medium leading-none">{tool.label}</div>
+                                </span>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+
+              <Link href="/blog/finance">
+                <span
+                  className={`transition-colors cursor-pointer ${
+                    location.startsWith("/blog")
+                      ? "text-foreground font-medium"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                  data-testid="nav-blog"
+                >
+                  Blog
+                </span>
+              </Link>
+
+              <Link href="/faq">
+                <span
+                  className={`transition-colors cursor-pointer ${
+                    location === "/faq"
+                      ? "text-foreground font-medium"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                  data-testid="nav-faq"
+                >
+                  FAQ
+                </span>
+              </Link>
             </div>
           </div>
           <div className="flex items-center space-x-4">
@@ -88,20 +178,47 @@ export default function Header() {
               </SheetTrigger>
               <SheetContent>
                 <div className="flex flex-col space-y-4 mt-8">
-                  {navItems.map((item) => (
-                    <Link key={item.href} href={item.href}>
-                      <span
-                        className={`text-lg transition-colors cursor-pointer ${
-                          location === item.href
-                            ? "text-foreground font-medium"
-                            : "text-muted-foreground hover:text-foreground"
-                        }`}
-                        data-testid={`mobile-nav-${item.label.toLowerCase().replace(/\s+/g, "-")}`}
-                      >
-                        {item.label}
-                      </span>
-                    </Link>
-                  ))}
+                  <Link href="/">
+                    <span className="text-lg text-muted-foreground hover:text-foreground cursor-pointer" data-testid="mobile-nav-home">
+                      Home
+                    </span>
+                  </Link>
+                  <div>
+                    <p className="text-sm font-semibold text-foreground mb-2">Finance Tools</p>
+                    {financeTools.map((tool) => (
+                      <Link key={tool.href} href={tool.href}>
+                        <span 
+                          className="block py-2 text-muted-foreground hover:text-foreground cursor-pointer"
+                          data-testid={`mobile-link-finance-${tool.href.split('/').pop()}`}
+                        >
+                          {tool.label}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-foreground mb-2">Developer Tools</p>
+                    {developerTools.map((tool) => (
+                      <Link key={tool.href} href={tool.href}>
+                        <span 
+                          className="block py-2 text-muted-foreground hover:text-foreground cursor-pointer"
+                          data-testid={`mobile-link-developer-${tool.href.split('/').pop()}`}
+                        >
+                          {tool.label}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                  <Link href="/blog/finance">
+                    <span className="text-lg text-muted-foreground hover:text-foreground cursor-pointer" data-testid="mobile-nav-blog">
+                      Blog
+                    </span>
+                  </Link>
+                  <Link href="/faq">
+                    <span className="text-lg text-muted-foreground hover:text-foreground cursor-pointer" data-testid="mobile-nav-faq">
+                      FAQ
+                    </span>
+                  </Link>
                 </div>
               </SheetContent>
             </Sheet>
