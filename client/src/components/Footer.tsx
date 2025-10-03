@@ -43,19 +43,25 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-sip-calculator">
-                  SIP Calculator
-                </a>
+                <Link href="/tools/sip-calculator">
+                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer" data-testid="link-sip-calculator">
+                    SIP Calculator
+                  </span>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-fd-calculator">
-                  FD Calculator
-                </a>
+                <Link href="/tools/fd-calculator">
+                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer" data-testid="link-fd-calculator">
+                    FD Calculator
+                  </span>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-tax-calculator">
-                  Tax Calculator
-                </a>
+                <Link href="/tools/tax-calculator">
+                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer" data-testid="link-tax-calculator">
+                    Tax Calculator
+                  </span>
+                </Link>
               </li>
             </ul>
           </div>
@@ -71,19 +77,25 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-base64-encoder">
-                  Base64 Encoder
-                </a>
+                <Link href="/tools/base64">
+                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer" data-testid="link-base64-encoder">
+                    Base64 Encoder
+                  </span>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-url-encoder">
-                  URL Encoder
-                </a>
+                <Link href="/tools/url-encoder">
+                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer" data-testid="link-url-encoder">
+                    URL Encoder
+                  </span>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="link-hash-generator">
-                  Hash Generator
-                </a>
+                <Link href="/tools/hash-generator">
+                  <span className="text-muted-foreground hover:text-primary transition-colors cursor-pointer" data-testid="link-hash-generator">
+                    Hash Generator
+                  </span>
+                </Link>
               </li>
             </ul>
           </div>

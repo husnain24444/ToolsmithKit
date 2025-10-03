@@ -7,11 +7,15 @@ import { useEffect, useState } from "react";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import LoanCalculator from "@/pages/LoanCalculator";
+import SIPCalculator from "@/pages/SIPCalculator";
+import FDCalculator from "@/pages/FDCalculator";
+import TaxCalculator from "@/pages/TaxCalculator";
 import CompoundInterestCalculator from "@/pages/CompoundInterestCalculator";
 import ROICalculator from "@/pages/ROICalculator";
 import JsonFormatter from "@/pages/JsonFormatter";
 import Base64Tool from "@/pages/Base64Tool";
 import HashGenerator from "@/pages/HashGenerator";
+import URLEncoder from "@/pages/URLEncoder";
 import BlogFinance from "@/pages/BlogFinance";
 import BlogDeveloper from "@/pages/BlogDeveloper";
 import FAQ from "@/pages/FAQ";
@@ -47,11 +51,15 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/tools/loan-calculator" component={LoanCalculator} />
+      <Route path="/tools/sip-calculator" component={SIPCalculator} />
+      <Route path="/tools/fd-calculator" component={FDCalculator} />
+      <Route path="/tools/tax-calculator" component={TaxCalculator} />
       <Route path="/tools/compound-interest" component={CompoundInterestCalculator} />
       <Route path="/tools/roi-calculator" component={ROICalculator} />
       <Route path="/tools/json-formatter" component={JsonFormatter} />
       <Route path="/tools/base64" component={Base64Tool} />
       <Route path="/tools/hash-generator" component={HashGenerator} />
+      <Route path="/tools/url-encoder" component={URLEncoder} />
       <Route path="/blog/finance" component={BlogFinance} />
       <Route path="/blog/developer" component={BlogDeveloper} />
       <Route path="/faq" component={FAQ} />
