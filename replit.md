@@ -10,6 +10,16 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### October 3, 2025 - Replit Environment Setup
+- **Project Import**: Successfully imported GitHub repository to Replit
+- **Dependencies**: All npm packages installed and verified (567 packages)
+- **Workflow Configuration**: 
+  - Set up "Start application" workflow on port 5000 with webview output
+  - Server configured to bind to 0.0.0.0:5000 for Replit proxy compatibility
+  - Vite configured with `allowedHosts: true` for iframe proxy support
+- **Application Status**: Running successfully with frontend and backend integrated
+- **Optional Email**: Email configuration requires environment variables (`EMAIL_USER` and `EMAIL_APP_PASSWORD`) but app runs without them
+
 ### October 1, 2025 - Email Integration & Legal Pages
 - **Email Functionality**: Implemented Nodemailer for contact form email sending
   - Uses Gmail SMTP with app password authentication
@@ -136,3 +146,31 @@ Preferred communication style: Simple, everyday language.
 - Frontend outputs to `dist/public`
 - Backend bundles to `dist/index.js`
 - Static file serving in production mode
+
+## Replit Environment Configuration
+
+### Development Workflow
+- **Start Command**: `npm run dev`
+- **Port**: 5000 (configured in server/index.ts)
+- **Host**: 0.0.0.0 (required for Replit proxy)
+- **Output Type**: Webview (frontend preview)
+- **Hot Reload**: Enabled via Vite HMR
+
+### Deployment Configuration
+- **Deployment Type**: Autoscale (stateless web application)
+- **Build Command**: `npm run build`
+  - Vite builds frontend to `dist/public`
+  - esbuild bundles backend to `dist/index.js`
+- **Start Command**: `npm run start`
+  - Runs production server with `NODE_ENV=production`
+  - Serves static files from `dist/public`
+
+### Environment Variables (Optional)
+- `EMAIL_USER`: Gmail address for contact form (optional)
+- `EMAIL_APP_PASSWORD`: Gmail app password for SMTP (optional)
+- Note: Application runs without email configuration; contact form will show error if not configured
+
+### Replit-Specific Features
+- **Proxy Compatibility**: Vite configured with `allowedHosts: true` for iframe proxy
+- **Dev Plugins**: Cartographer, dev banner, and runtime error modal for Replit development
+- **Auto-restart**: Workflow automatically restarts on file changes during development
