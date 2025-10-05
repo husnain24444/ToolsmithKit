@@ -18,6 +18,11 @@ import JsonFormatter from "@/pages/JsonFormatter";
 import Base64Tool from "@/pages/Base64Tool";
 import HashGenerator from "@/pages/HashGenerator";
 import URLEncoder from "@/pages/URLEncoder";
+import WordCounter from "@/pages/WordCounter";
+import PasswordGenerator from "@/pages/PasswordGenerator";
+import QRCodeGenerator from "@/pages/QRCodeGenerator";
+import PercentageCalculator from "@/pages/PercentageCalculator";
+import AgeCalculator from "@/pages/AgeCalculator";
 import BlogFinance from "@/pages/BlogFinance";
 import BlogDeveloper from "@/pages/BlogDeveloper";
 import FAQ from "@/pages/FAQ";
@@ -62,6 +67,11 @@ function Router() {
       <Route path="/tools/base64" component={Base64Tool} />
       <Route path="/tools/hash-generator" component={HashGenerator} />
       <Route path="/tools/url-encoder" component={URLEncoder} />
+      <Route path="/tools/word-counter" component={WordCounter} />
+      <Route path="/tools/password-generator" component={PasswordGenerator} />
+      <Route path="/tools/qr-code-generator" component={QRCodeGenerator} />
+      <Route path="/tools/percentage-calculator" component={PercentageCalculator} />
+      <Route path="/tools/age-calculator" component={AgeCalculator} />
       <Route path="/blog/finance" component={BlogFinance} />
       <Route path="/blog/developer" component={BlogDeveloper} />
       <Route path="/faq" component={FAQ} />
