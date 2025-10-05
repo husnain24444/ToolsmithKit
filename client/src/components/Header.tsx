@@ -40,12 +40,16 @@ export default function Header() {
     { href: "/tools/loan-calculator", label: "EMI / Loan Calculator" },
     { href: "/tools/compound-interest", label: "Compound Interest Calculator" },
     { href: "/tools/roi-calculator", label: "ROI Calculator" },
+    { href: "/tools/sip-calculator", label: "SIP Calculator" },
+    { href: "/tools/fd-calculator", label: "FD Calculator" },
+    { href: "/tools/tax-calculator", label: "Tax Calculator" },
   ];
 
   const developerTools = [
     { href: "/tools/json-formatter", label: "JSON Formatter" },
     { href: "/tools/base64", label: "Base64 Encoder/Decoder" },
     { href: "/tools/hash-generator", label: "Hash Generator" },
+    { href: "/tools/url-encoder", label: "URL Encoder/Decoder" },
   ];
 
   return (
@@ -79,7 +83,7 @@ export default function Header() {
                       Finance Tools
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <ul className="grid w-[400px] gap-3 p-4">
+                      <ul className="grid w-[400px] gap-2 p-4 md:grid-cols-2">
                         {financeTools.map((tool) => (
                           <li key={tool.href}>
                             <NavigationMenuLink asChild>
@@ -103,7 +107,7 @@ export default function Header() {
                       Developer Tools
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <ul className="grid w-[400px] gap-3 p-4">
+                      <ul className="grid w-[400px] gap-2 p-4 md:grid-cols-2">
                         {developerTools.map((tool) => (
                           <li key={tool.href}>
                             <NavigationMenuLink asChild>
