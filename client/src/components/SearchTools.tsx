@@ -29,6 +29,11 @@ const allTools: Tool[] = [
   { href: "/tools/base64", label: "Base64 Encoder/Decoder", category: "Developer", keywords: ["base64", "encode", "decode", "converter"] },
   { href: "/tools/hash-generator", label: "Hash Generator", category: "Developer", keywords: ["hash", "sha", "md5", "checksum"] },
   { href: "/tools/url-encoder", label: "URL Encoder/Decoder", category: "Developer", keywords: ["url", "encode", "decode", "percent"] },
+  { href: "/tools/word-counter", label: "Word Counter", category: "General", keywords: ["word", "count", "character", "text", "essay"] },
+  { href: "/tools/password-generator", label: "Password Generator", category: "General", keywords: ["password", "generate", "secure", "random"] },
+  { href: "/tools/qr-code-generator", label: "QR Code Generator", category: "General", keywords: ["qr", "code", "barcode", "generate"] },
+  { href: "/tools/percentage-calculator", label: "Percentage Calculator", category: "General", keywords: ["percentage", "percent", "calculate", "discount"] },
+  { href: "/tools/age-calculator", label: "Age Calculator", category: "General", keywords: ["age", "birthday", "calculate", "years", "days"] },
 ];
 
 export default function SearchTools() {

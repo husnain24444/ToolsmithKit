@@ -14,28 +14,28 @@ const popularTools = [
     category: "Finance"
   },
   {
-    href: "/tools/json-formatter",
-    label: "JSON Formatter",
-    description: "Top developer tool",
-    icon: "📋",
-    badge: "Trending",
-    category: "Developer"
-  },
-  {
-    href: "/tools/sip-calculator",
-    label: "SIP Calculator",
-    description: "Investment planning made easy",
-    icon: "📈",
-    badge: "Popular",
-    category: "Finance"
-  },
-  {
-    href: "/tools/tax-calculator",
-    label: "Tax Calculator",
-    description: "Calculate your tax liability",
-    icon: "🧾",
+    href: "/tools/word-counter",
+    label: "Word Counter",
+    description: "Count words & characters",
+    icon: "📝",
     badge: "Hot",
-    category: "Finance"
+    category: "General"
+  },
+  {
+    href: "/tools/password-generator",
+    label: "Password Generator",
+    description: "Create secure passwords",
+    icon: "🔐",
+    badge: "Trending",
+    category: "General"
+  },
+  {
+    href: "/tools/percentage-calculator",
+    label: "Percentage Calculator",
+    description: "Fast percentage calculations",
+    icon: "📊",
+    badge: "Popular",
+    category: "General"
   },
 ];
 

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "wouter";
-import { DollarSign, Code2, Zap, CheckCircle, Smartphone, Package, TrendingUp, Hash, Key } from "lucide-react";
+import { DollarSign, Code2, Zap, CheckCircle, Smartphone, Package, TrendingUp, Hash, Key, FileText, Lock, QrCode, Percent, Calendar } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AdPlaceholder from "@/components/AdPlaceholder";
@@ -188,6 +188,91 @@ export default function Home() {
                 </p>
                 <Button asChild className="w-full" size="sm" data-testid="button-open-hash-generator">
                   <Link href="/tools/hash-generator">Open Generator →</Link>
+                </Button>
+              </Card>
+            </div>
+          </div>
+
+          <div className="mt-12">
+            <h3 className="text-2xl font-bold text-foreground dark:text-foreground mb-6">General Tools</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Word Counter Card */}
+              <Card className="p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-green-500/10 dark:bg-green-500/20 p-2 rounded-lg mr-3">
+                    <FileText className="w-6 h-6 text-green-500 dark:text-green-500" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground dark:text-foreground">Word Counter</h3>
+                </div>
+                <p className="text-sm text-muted-foreground dark:text-muted-foreground mb-4">
+                  Count words, characters, sentences, and paragraphs with reading time estimates.
+                </p>
+                <Button asChild className="w-full" size="sm" data-testid="button-open-word-counter">
+                  <Link href="/tools/word-counter">Open Counter →</Link>
+                </Button>
+              </Card>
+
+              {/* Password Generator Card */}
+              <Card className="p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-green-500/10 dark:bg-green-500/20 p-2 rounded-lg mr-3">
+                    <Lock className="w-6 h-6 text-green-500 dark:text-green-500" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground dark:text-foreground">Password Generator</h3>
+                </div>
+                <p className="text-sm text-muted-foreground dark:text-muted-foreground mb-4">
+                  Generate strong, secure, and random passwords with customizable options.
+                </p>
+                <Button asChild className="w-full" size="sm" data-testid="button-open-password-generator">
+                  <Link href="/tools/password-generator">Generate Password →</Link>
+                </Button>
+              </Card>
+
+              {/* QR Code Generator Card */}
+              <Card className="p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-green-500/10 dark:bg-green-500/20 p-2 rounded-lg mr-3">
+                    <QrCode className="w-6 h-6 text-green-500 dark:text-green-500" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground dark:text-foreground">QR Code Generator</h3>
+                </div>
+                <p className="text-sm text-muted-foreground dark:text-muted-foreground mb-4">
+                  Create QR codes instantly for URLs, text, and more with download option.
+                </p>
+                <Button asChild className="w-full" size="sm" data-testid="button-open-qr-generator">
+                  <Link href="/tools/qr-code-generator">Create QR Code →</Link>
+                </Button>
+              </Card>
+
+              {/* Percentage Calculator Card */}
+              <Card className="p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-green-500/10 dark:bg-green-500/20 p-2 rounded-lg mr-3">
+                    <Percent className="w-6 h-6 text-green-500 dark:text-green-500" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground dark:text-foreground">Percentage Calculator</h3>
+                </div>
+                <p className="text-sm text-muted-foreground dark:text-muted-foreground mb-4">
+                  Calculate percentages, percentage change, increase, and decrease easily.
+                </p>
+                <Button asChild className="w-full" size="sm" data-testid="button-open-percentage-calculator">
+                  <Link href="/tools/percentage-calculator">Open Calculator →</Link>
+                </Button>
+              </Card>
+
+              {/* Age Calculator Card */}
+              <Card className="p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="bg-green-500/10 dark:bg-green-500/20 p-2 rounded-lg mr-3">
+                    <Calendar className="w-6 h-6 text-green-500 dark:text-green-500" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground dark:text-foreground">Age Calculator</h3>
+                </div>
+                <p className="text-sm text-muted-foreground dark:text-muted-foreground mb-4">
+                  Calculate your exact age in years, months, days with birthday countdown.
+                </p>
+                <Button asChild className="w-full" size="sm" data-testid="button-open-age-calculator">
+                  <Link href="/tools/age-calculator">Calculate Age →</Link>
                 </Button>
               </Card>
             </div>

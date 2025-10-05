@@ -53,6 +53,14 @@ export default function Header() {
     { href: "/tools/url-encoder", label: "URL Encoder/Decoder" },
   ];
 
+  const generalTools = [
+    { href: "/tools/word-counter", label: "Word Counter" },
+    { href: "/tools/password-generator", label: "Password Generator" },
+    { href: "/tools/qr-code-generator", label: "QR Code Generator" },
+    { href: "/tools/percentage-calculator", label: "Percentage Calculator" },
+    { href: "/tools/age-calculator", label: "Age Calculator" },
+  ];
+
   return (
     <header className="bg-card border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
@@ -116,6 +124,30 @@ export default function Header() {
                                 <span 
                                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer"
                                   data-testid={`link-developer-${tool.href.split('/').pop()}`}
+                                >
+                                  <div className="text-sm font-medium leading-none">{tool.label}</div>
+                                </span>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="text-muted-foreground hover:text-foreground" data-testid="nav-general-tools">
+                      General Tools
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="grid w-[400px] gap-2 p-4 md:grid-cols-2">
+                        {generalTools.map((tool) => (
+                          <li key={tool.href}>
+                            <NavigationMenuLink asChild>
+                              <Link href={tool.href}>
+                                <span 
+                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer"
+                                  data-testid={`link-general-${tool.href.split('/').pop()}`}
                                 >
                                   <div className="text-sm font-medium leading-none">{tool.label}</div>
                                 </span>
@@ -209,6 +241,19 @@ export default function Header() {
                         <span 
                           className="block py-2 text-muted-foreground hover:text-foreground cursor-pointer"
                           data-testid={`mobile-link-developer-${tool.href.split('/').pop()}`}
+                        >
+                          {tool.label}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-foreground mb-2">General Tools</p>
+                    {generalTools.map((tool) => (
+                      <Link key={tool.href} href={tool.href}>
+                        <span 
+                          className="block py-2 text-muted-foreground hover:text-foreground cursor-pointer"
+                          data-testid={`mobile-link-general-${tool.href.split('/').pop()}`}
                         >
                           {tool.label}
                         </span>
