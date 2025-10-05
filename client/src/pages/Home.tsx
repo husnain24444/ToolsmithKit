@@ -4,6 +4,8 @@ import { DollarSign, Code2, Zap, CheckCircle, Smartphone, Package, TrendingUp, H
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AdPlaceholder from "@/components/AdPlaceholder";
+import RecentTools from "@/components/RecentTools";
+import PopularTools from "@/components/PopularTools";
 import { setSEO } from "@/lib/seo";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -70,6 +72,10 @@ export default function Home() {
       </section>
 
       <AdPlaceholder type="banner" />
+
+      <RecentTools />
+
+      <PopularTools />
 
       {/* Tools Section */}
       <section id="tools" className="py-16">

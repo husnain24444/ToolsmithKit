@@ -15,6 +15,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import SearchTools from "@/components/SearchTools";
 
 export default function Header() {
   const [location] = useLocation();
@@ -156,6 +157,7 @@ export default function Header() {
             </div>
           </div>
           <div className="flex items-center space-x-4">
+            <SearchTools />
             <Button
               variant="outline"
               size="icon"

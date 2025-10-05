@@ -4,8 +4,10 @@ import { Doughnut } from "react-chartjs-2";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AdPlaceholder from "@/components/AdPlaceholder";
+import RelatedTools from "@/components/RelatedTools";
 import { setSEO } from "@/lib/seo";
 import { calculateEMI, formatCurrency } from "@/lib/emiCalculations";
+import { addRecentTool } from "@/lib/recentTools";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -25,6 +27,12 @@ export default function LoanCalculator() {
       title: "EMI Calculator - Calculate Loan EMI Online | ToolsHub",
       description: "Free online EMI calculator. Calculate monthly loan payments, total interest, and view detailed amortization schedules. Supports home loans, car loans, and personal loans.",
       keywords: "EMI calculator, loan calculator, home loan EMI, car loan calculator, personal loan EMI, interest calculator",
+    });
+    
+    addRecentTool({
+      href: "/tools/loan-calculator",
+      label: "EMI / Loan Calculator",
+      category: "finance",
     });
   }, []);
 
@@ -226,6 +234,8 @@ Generated on: ${new Date().toLocaleDateString()}
           </div>
 
           <AdPlaceholder type="inline" className="mt-8" />
+
+          <RelatedTools currentTool="/tools/loan-calculator" category="finance" />
         </div>
       </div>
 
