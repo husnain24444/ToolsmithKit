@@ -13,3 +13,9 @@
 [x] 3. Add Twitter Card tags
 [x] 4. Verify homepage has proper internal linking to all tools
 [x] 5. Test the application with new SEO tags
+
+## Google Indexing Readiness
+[x] 1. Create client/public/robots.txt
+[x] 2. Create client/public/sitemap.xml with all 23 pages
+[x] 3. Verify robots.txt is accessible
+[x] 4. Verify sitemap.xml is accessible
