@@ -2,139 +2,139 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/</loc>
+    <loc>https://toolsmith.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/tools/loan-calculator</loc>
+    <loc>https://toolsmith.app/tools/loan-calculator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/tools/sip-calculator</loc>
+    <loc>https://toolsmith.app/tools/sip-calculator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/tools/fd-calculator</loc>
+    <loc>https://toolsmith.app/tools/fd-calculator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/tools/tax-calculator</loc>
+    <loc>https://toolsmith.app/tools/tax-calculator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/tools/compound-interest</loc>
+    <loc>https://toolsmith.app/tools/compound-interest</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/tools/roi-calculator</loc>
+    <loc>https://toolsmith.app/tools/roi-calculator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/tools/json-formatter</loc>
+    <loc>https://toolsmith.app/tools/json-formatter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/tools/base64</loc>
+    <loc>https://toolsmith.app/tools/base64</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/tools/hash-generator</loc>
+    <loc>https://toolsmith.app/tools/hash-generator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/tools/url-encoder</loc>
+    <loc>https://toolsmith.app/tools/url-encoder</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/tools/word-counter</loc>
+    <loc>https://toolsmith.app/tools/word-counter</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/tools/password-generator</loc>
+    <loc>https://toolsmith.app/tools/password-generator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/tools/qr-code-generator</loc>
+    <loc>https://toolsmith.app/tools/qr-code-generator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/tools/percentage-calculator</loc>
+    <loc>https://toolsmith.app/tools/percentage-calculator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/tools/age-calculator</loc>
+    <loc>https://toolsmith.app/tools/age-calculator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/blog/finance</loc>
+    <loc>https://toolsmith.app/blog/finance</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/blog/developer</loc>
+    <loc>https://toolsmith.app/blog/developer</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/faq</loc>
+    <loc>https://toolsmith.app/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/about</loc>
+    <loc>https://toolsmith.app/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/contact</loc>
+    <loc>https://toolsmith.app/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/privacy-policy</loc>
+    <loc>https://toolsmith.app/privacy-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://toolsmith-kit.vercel.app/terms-of-service</loc>
+    <loc>https://toolsmith.app/terms-of-service</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
