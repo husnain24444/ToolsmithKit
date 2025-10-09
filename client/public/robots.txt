@@ -1,17 +1,4 @@
-# robots.txt for https://toolsmith.app
 User-agent: *
 Allow: /
 
-# Disallow common admin or backend routes (if any)
-Disallow: /admin/
-Disallow: /api/
-
-# Allow all public pages and tools
-Allow: /tools/
-Allow: /blog/
-Allow: /faq/
-Allow: /about/
-Allow: /contact/
-
-# Sitemap location
 Sitemap: https://toolsmith.app/sitemap.xml
