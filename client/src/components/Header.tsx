@@ -25,6 +25,7 @@ export default function Header() {
     }
     return "light";
   });
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -35,6 +36,15 @@ export default function Header() {
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleLinkClick = () => {
+    scrollToTop();
+    setMobileMenuOpen(false);
   };
 
   const financeTools = [
@@ -67,13 +77,14 @@ export default function Header() {
         <nav className="flex items-center justify-between">
           <div className="flex items-center space-x-8">
             <Link href="/">
-              <h1 className="text-2xl font-bold text-primary cursor-pointer" data-testid="logo">
+              <h1 className="text-2xl font-bold text-primary cursor-pointer" data-testid="logo" onClick={scrollToTop}>
                 ToolsHub
               </h1>
             </Link>
             <div className="hidden md:flex items-center space-x-6">
               <Link href="/">
                 <span
+                  onClick={scrollToTop}
                   className={`transition-colors cursor-pointer ${
                     location === "/"
                       ? "text-foreground font-medium"
@@ -98,6 +109,7 @@ export default function Header() {
                             <NavigationMenuLink asChild>
                               <Link href={tool.href}>
                                 <span 
+                                  onClick={scrollToTop}
                                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer"
                                   data-testid={`link-finance-${tool.href.split('/').pop()}`}
                                 >
@@ -122,6 +134,7 @@ export default function Header() {
                             <NavigationMenuLink asChild>
                               <Link href={tool.href}>
                                 <span 
+                                  onClick={scrollToTop}
                                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer"
                                   data-testid={`link-developer-${tool.href.split('/').pop()}`}
                                 >
@@ -146,6 +159,7 @@ export default function Header() {
                             <NavigationMenuLink asChild>
                               <Link href={tool.href}>
                                 <span 
+                                  onClick={scrollToTop}
                                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer"
                                   data-testid={`link-general-${tool.href.split('/').pop()}`}
                                 >
@@ -163,6 +177,7 @@ export default function Header() {
 
               <Link href="/blog/finance">
                 <span
+                  onClick={scrollToTop}
                   className={`transition-colors cursor-pointer ${
                     location.startsWith("/blog")
                       ? "text-foreground font-medium"
@@ -176,6 +191,7 @@ export default function Header() {
 
               <Link href="/faq">
                 <span
+                  onClick={scrollToTop}
                   className={`transition-colors cursor-pointer ${
                     location === "/faq"
                       ? "text-foreground font-medium"
@@ -203,7 +219,7 @@ export default function Header() {
                 <Sun className="h-5 w-5" />
               )}
             </Button>
-            <Sheet>
+            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
                 <Button
                   variant="outline"
@@ -217,7 +233,11 @@ export default function Header() {
               <SheetContent>
                 <div className="flex flex-col space-y-4 mt-8">
                   <Link href="/">
-                    <span className="text-lg text-muted-foreground hover:text-foreground cursor-pointer" data-testid="mobile-nav-home">
+                    <span 
+                      onClick={handleLinkClick}
+                      className="text-lg text-muted-foreground hover:text-foreground cursor-pointer" 
+                      data-testid="mobile-nav-home"
+                    >
                       Home
                     </span>
                   </Link>
@@ -226,6 +246,7 @@ export default function Header() {
                     {financeTools.map((tool) => (
                       <Link key={tool.href} href={tool.href}>
                         <span 
+                          onClick={handleLinkClick}
                           className="block py-2 text-muted-foreground hover:text-foreground cursor-pointer"
                           data-testid={`mobile-link-finance-${tool.href.split('/').pop()}`}
                         >
@@ -239,6 +260,7 @@ export default function Header() {
                     {developerTools.map((tool) => (
                       <Link key={tool.href} href={tool.href}>
                         <span 
+                          onClick={handleLinkClick}
                           className="block py-2 text-muted-foreground hover:text-foreground cursor-pointer"
                           data-testid={`mobile-link-developer-${tool.href.split('/').pop()}`}
                         >
@@ -252,6 +274,7 @@ export default function Header() {
                     {generalTools.map((tool) => (
                       <Link key={tool.href} href={tool.href}>
                         <span 
+                          onClick={handleLinkClick}
                           className="block py-2 text-muted-foreground hover:text-foreground cursor-pointer"
                           data-testid={`mobile-link-general-${tool.href.split('/').pop()}`}
                         >
@@ -261,12 +284,20 @@ export default function Header() {
                     ))}
                   </div>
                   <Link href="/blog/finance">
-                    <span className="text-lg text-muted-foreground hover:text-foreground cursor-pointer" data-testid="mobile-nav-blog">
+                    <span 
+                      onClick={handleLinkClick}
+                      className="text-lg text-muted-foreground hover:text-foreground cursor-pointer" 
+                      data-testid="mobile-nav-blog"
+                    >
                       Blog
                     </span>
                   </Link>
                   <Link href="/faq">
-                    <span className="text-lg text-muted-foreground hover:text-foreground cursor-pointer" data-testid="mobile-nav-faq">
+                    <span 
+                      onClick={handleLinkClick}
+                      className="text-lg text-muted-foreground hover:text-foreground cursor-pointer" 
+                      data-testid="mobile-nav-faq"
+                    >
                       FAQ
                     </span>
                   </Link>
