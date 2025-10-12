@@ -230,8 +230,8 @@ export default function Header() {
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
-              <SheetContent>
-                <div className="flex flex-col space-y-4 mt-8">
+              <SheetContent className="overflow-y-auto">
+                <div className="flex flex-col space-y-4 mt-8 pb-8">
                   <Link href="/">
                     <span 
                       onClick={handleLinkClick}

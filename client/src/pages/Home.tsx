@@ -19,6 +19,10 @@ export default function Home() {
     });
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const features = [
     {
       icon: <Zap className="w-6 h-6" />,
@@ -102,7 +106,7 @@ export default function Home() {
                   Calculate monthly loan payments with detailed interest breakdown and amortization schedule.
                 </p>
                 <Button asChild className="w-full" size="sm" data-testid="button-open-loan-calculator">
-                  <Link href="/tools/loan-calculator">Open Calculator →</Link>
+                  <Link href="/tools/loan-calculator" onClick={scrollToTop}>Open Calculator →</Link>
                 </Button>
               </Card>
 
@@ -118,7 +122,7 @@ export default function Home() {
                   Calculate investment growth with different compounding frequencies and visualize returns.
                 </p>
                 <Button asChild className="w-full" size="sm" data-testid="button-open-compound-calculator">
-                  <Link href="/tools/compound-interest">Open Calculator →</Link>
+                  <Link href="/tools/compound-interest" onClick={scrollToTop}>Open Calculator →</Link>
                 </Button>
               </Card>
 
@@ -134,7 +138,7 @@ export default function Home() {
                   Measure investment performance and calculate return on investment with ease.
                 </p>
                 <Button asChild className="w-full" size="sm" data-testid="button-open-roi-calculator">
-                  <Link href="/tools/roi-calculator">Open Calculator →</Link>
+                  <Link href="/tools/roi-calculator" onClick={scrollToTop}>Open Calculator →</Link>
                 </Button>
               </Card>
             </div>
@@ -155,7 +159,7 @@ export default function Home() {
                   Format, validate, and beautify JSON with syntax highlighting and error detection.
                 </p>
                 <Button asChild className="w-full" size="sm" data-testid="button-open-json-formatter">
-                  <Link href="/tools/json-formatter">Open Formatter →</Link>
+                  <Link href="/tools/json-formatter" onClick={scrollToTop}>Open Formatter →</Link>
                 </Button>
               </Card>
 
@@ -171,7 +175,7 @@ export default function Home() {
                   Encode and decode Base64 strings with support for file upload and download.
                 </p>
                 <Button asChild className="w-full" size="sm" data-testid="button-open-base64">
-                  <Link href="/tools/base64">Open Tool →</Link>
+                  <Link href="/tools/base64" onClick={scrollToTop}>Open Tool →</Link>
                 </Button>
               </Card>
 
@@ -187,7 +191,7 @@ export default function Home() {
                   Generate SHA-1, SHA-256, SHA-384, and SHA-512 hashes for any text input.
                 </p>
                 <Button asChild className="w-full" size="sm" data-testid="button-open-hash-generator">
-                  <Link href="/tools/hash-generator">Open Generator →</Link>
+                  <Link href="/tools/hash-generator" onClick={scrollToTop}>Open Generator →</Link>
                 </Button>
               </Card>
             </div>
@@ -208,7 +212,7 @@ export default function Home() {
                   Count words, characters, sentences, and paragraphs with reading time estimates.
                 </p>
                 <Button asChild className="w-full" size="sm" data-testid="button-open-word-counter">
-                  <Link href="/tools/word-counter">Open Counter →</Link>
+                  <Link href="/tools/word-counter" onClick={scrollToTop}>Open Counter →</Link>
                 </Button>
               </Card>
 
@@ -224,7 +228,7 @@ export default function Home() {
                   Generate strong, secure, and random passwords with customizable options.
                 </p>
                 <Button asChild className="w-full" size="sm" data-testid="button-open-password-generator">
-                  <Link href="/tools/password-generator">Generate Password →</Link>
+                  <Link href="/tools/password-generator" onClick={scrollToTop}>Generate Password →</Link>
                 </Button>
               </Card>
 
@@ -240,7 +244,7 @@ export default function Home() {
                   Create QR codes instantly for URLs, text, and more with download option.
                 </p>
                 <Button asChild className="w-full" size="sm" data-testid="button-open-qr-generator">
-                  <Link href="/tools/qr-code-generator">Create QR Code →</Link>
+                  <Link href="/tools/qr-code-generator" onClick={scrollToTop}>Create QR Code →</Link>
                 </Button>
               </Card>
 
@@ -256,7 +260,7 @@ export default function Home() {
                   Calculate percentages, percentage change, increase, and decrease easily.
                 </p>
                 <Button asChild className="w-full" size="sm" data-testid="button-open-percentage-calculator">
-                  <Link href="/tools/percentage-calculator">Open Calculator →</Link>
+                  <Link href="/tools/percentage-calculator" onClick={scrollToTop}>Open Calculator →</Link>
                 </Button>
               </Card>
 
@@ -272,7 +276,7 @@ export default function Home() {
                   Calculate your exact age in years, months, days with birthday countdown.
                 </p>
                 <Button asChild className="w-full" size="sm" data-testid="button-open-age-calculator">
-                  <Link href="/tools/age-calculator">Calculate Age →</Link>
+                  <Link href="/tools/age-calculator" onClick={scrollToTop}>Calculate Age →</Link>
                 </Button>
               </Card>
             </div>

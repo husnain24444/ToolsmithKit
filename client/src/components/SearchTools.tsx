@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -60,6 +61,7 @@ export default function SearchTools() {
   const handleToolClick = (href: string) => {
     setOpen(false);
     setQuery("");
+    window.scrollTo({ top: 0, behavior: "smooth" });
     setLocation(href);
   };
 
@@ -93,6 +95,9 @@ export default function SearchTools() {
       <DialogContent className="max-w-2xl">
         <DialogHeader>
           <DialogTitle>Search Tools</DialogTitle>
+          <DialogDescription>
+            Search through all available tools by name, category, or keywords.
+          </DialogDescription>
         </DialogHeader>
         <div className="relative">
           <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />

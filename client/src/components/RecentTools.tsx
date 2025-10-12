@@ -12,6 +12,10 @@ export default function RecentTools() {
     setRecentTools(getRecentTools());
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   if (recentTools.length === 0) {
     return null;
   }
@@ -26,7 +30,7 @@ export default function RecentTools() {
         <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4">
           {recentTools.map((tool) => (
             <Card key={tool.href} className="p-4 hover:shadow-md transition-shadow">
-              <Link href={tool.href}>
+              <Link href={tool.href} onClick={scrollToTop}>
                 <div className="cursor-pointer" data-testid={`recent-tool-${tool.href.split("/").pop()}`}>
                   <div className="text-sm font-medium text-foreground mb-1 line-clamp-2">
                     {tool.label}

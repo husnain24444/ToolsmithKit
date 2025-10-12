@@ -40,6 +40,10 @@ const popularTools = [
 ];
 
 export default function PopularTools() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <section className="py-16 bg-gradient-to-br from-primary/5 to-accent/5">
       <div className="container mx-auto px-4">
@@ -65,7 +69,7 @@ export default function PopularTools() {
               <p className="text-sm text-muted-foreground mb-1">{tool.description}</p>
               <p className="text-xs text-muted-foreground mb-4">{tool.category}</p>
               <Button asChild className="w-full" size="sm" data-testid={`popular-tool-${tool.href.split("/").pop()}`}>
-                <Link href={tool.href}>Try Now →</Link>
+                <Link href={tool.href} onClick={scrollToTop}>Try Now →</Link>
               </Button>
             </Card>
           ))}
