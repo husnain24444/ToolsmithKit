@@ -60,7 +60,7 @@ export default function Home() {
           <h2 className="text-4xl md:text-6xl font-bold text-foreground dark:text-foreground mb-6">
             Professional Online Tools
           </h2>
-          <p className="text-xl text-muted-foreground dark:text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/80 dark:text-foreground/90 mb-8 max-w-2xl mx-auto">
             Free, fast, and reliable tools for finance calculations and development tasks.
             SEO-optimized and mobile-friendly.
           </p>
@@ -86,7 +86,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground dark:text-foreground mb-4">Featured Tools</h2>
-            <p className="text-lg text-muted-foreground dark:text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-foreground/70 dark:text-foreground/80 max-w-2xl mx-auto">
               Powerful calculators and formatters designed for professionals and enthusiasts
             </p>
           </div>

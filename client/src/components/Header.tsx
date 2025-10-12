@@ -225,6 +225,7 @@ export default function Header() {
                   variant="outline"
                   size="icon"
                   className="md:hidden"
+                  aria-label="Open mobile menu"
                   data-testid="button-mobile-menu"
                 >
                   <Menu className="h-5 w-5" />
