@@ -5,31 +5,32 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import { useEffect, useState } from "react";
-import NotFound from "@/pages/not-found";
-import Home from "@/pages/Home";
-import LoanCalculator from "@/pages/LoanCalculator";
-import SIPCalculator from "@/pages/SIPCalculator";
-import FDCalculator from "@/pages/FDCalculator";
-import TaxCalculator from "@/pages/TaxCalculator";
-import CompoundInterestCalculator from "@/pages/CompoundInterestCalculator";
-import ROICalculator from "@/pages/ROICalculator";
-import JsonFormatter from "@/pages/JsonFormatter";
-import Base64Tool from "@/pages/Base64Tool";
-import HashGenerator from "@/pages/HashGenerator";
-import URLEncoder from "@/pages/URLEncoder";
-import WordCounter from "@/pages/WordCounter";
-import PasswordGenerator from "@/pages/PasswordGenerator";
-import QRCodeGenerator from "@/pages/QRCodeGenerator";
-import PercentageCalculator from "@/pages/PercentageCalculator";
-import AgeCalculator from "@/pages/AgeCalculator";
-import BlogFinance from "@/pages/BlogFinance";
-import BlogDeveloper from "@/pages/BlogDeveloper";
-import FAQ from "@/pages/FAQ";
-import AboutUs from "@/pages/AboutUs";
-import Contact from "@/pages/Contact";
-import PrivacyPolicy from "@/pages/PrivacyPolicy";
-import TermsOfService from "@/pages/TermsOfService";
+import { useEffect, useState, lazy, Suspense } from "react";
+
+const NotFound = lazy(() => import("@/pages/not-found"));
+const Home = lazy(() => import("@/pages/Home"));
+const LoanCalculator = lazy(() => import("@/pages/LoanCalculator"));
+const SIPCalculator = lazy(() => import("@/pages/SIPCalculator"));
+const FDCalculator = lazy(() => import("@/pages/FDCalculator"));
+const TaxCalculator = lazy(() => import("@/pages/TaxCalculator"));
+const CompoundInterestCalculator = lazy(() => import("@/pages/CompoundInterestCalculator"));
+const ROICalculator = lazy(() => import("@/pages/ROICalculator"));
+const JsonFormatter = lazy(() => import("@/pages/JsonFormatter"));
+const Base64Tool = lazy(() => import("@/pages/Base64Tool"));
+const HashGenerator = lazy(() => import("@/pages/HashGenerator"));
+const URLEncoder = lazy(() => import("@/pages/URLEncoder"));
+const WordCounter = lazy(() => import("@/pages/WordCounter"));
+const PasswordGenerator = lazy(() => import("@/pages/PasswordGenerator"));
+const QRCodeGenerator = lazy(() => import("@/pages/QRCodeGenerator"));
+const PercentageCalculator = lazy(() => import("@/pages/PercentageCalculator"));
+const AgeCalculator = lazy(() => import("@/pages/AgeCalculator"));
+const BlogFinance = lazy(() => import("@/pages/BlogFinance"));
+const BlogDeveloper = lazy(() => import("@/pages/BlogDeveloper"));
+const FAQ = lazy(() => import("@/pages/FAQ"));
+const AboutUs = lazy(() => import("@/pages/AboutUs"));
+const Contact = lazy(() => import("@/pages/Contact"));
+const PrivacyPolicy = lazy(() => import("@/pages/PrivacyPolicy"));
+const TermsOfService = lazy(() => import("@/pages/TermsOfService"));
 
 function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<"light" | "dark">(() => {
@@ -90,7 +91,9 @@ function App() {
       <ThemeProvider>
         <TooltipProvider>
           <Toaster />
-          <Router />
+          <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div></div>}>
+            <Router />
+          </Suspense>
           <Analytics />
           <SpeedInsights />
         </TooltipProvider>
