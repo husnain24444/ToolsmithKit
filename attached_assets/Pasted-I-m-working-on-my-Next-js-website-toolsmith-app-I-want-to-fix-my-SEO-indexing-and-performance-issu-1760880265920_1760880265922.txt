@@ -1,0 +1,113 @@
+I’m working on my Next.js website toolsmith.app
+.
+I want to fix my SEO indexing and performance issues as detected in Google Search Console and PageSpeed Insights.
+Please carefully follow these steps and make the necessary code changes in my project.
+
+🧩 1. SEO + Google Indexing Fixes
+
+Please:
+
+Add a proper <head> SEO structure to all pages using next/head with:
+
+<title>Toolsmith – Free Online Tools</title>
+<meta name="description" content="Toolsmith.app provides free online text tools, converters, and generators to make your daily workflow faster and smarter.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://toolsmith.app" />
+
+
+Ensure all internal pages have their own unique canonical tag based on their route.
+
+Create or fix sitemap.xml and robots.txt in the public/ folder:
+
+robots.txt
+
+User-agent: *
+Allow: /
+Sitemap: https://toolsmith.app/sitemap.xml
+
+
+sitemap.xml should dynamically include all pages and tools URLs.
+
+Add internal links between related tools to help crawlers discover all pages.
+
+Remove duplicate URLs (like /tool and /tool/) and use permanent 301 redirects if needed.
+
+🧱 2. Fix Page Indexing Issues
+
+Apply fixes for the following Search Console problems:
+
+Issue	Fix
+“Page with redirect”	Remove unnecessary redirects; ensure main domain is HTTPS only
+“Discovered – currently not indexed”	Improve internal linking + content length; request reindex after deployment
+“Duplicate, Google chose different canonical”	Use proper <link rel="canonical"> for every page
+“Crawled – currently not indexed”	Add more meaningful content, headings, and meta descriptions
+⚡ 3. Performance Optimization
+
+Fix LCP (Largest Contentful Paint) and FCP (First Contentful Paint) issues to improve Core Web Vitals.
+
+Please:
+
+Enable Image Optimization
+
+Use Next.js <Image> component for all hero and tool images with priority and proper sizes.
+
+Compress large images (WebP preferred).
+
+Lazy load non-critical components using:
+
+const Component = dynamic(() => import('../components/Component'), { ssr: false });
+
+
+Preload critical fonts in _document.js:
+
+<link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+
+
+Remove render-blocking resources (e.g., unnecessary scripts, large CSS).
+
+Use next/script with strategy="lazyOnload" for analytics or external JS.
+
+Add caching headers in next.config.js:
+
+async headers() {
+  return [
+    {
+      source: '/(.*)',
+      headers: [
+        { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+      ],
+    },
+  ];
+}
+
+
+Optimize server-side rendering and API routes to reduce TTFB.
+
+🧰 4. Verification & Deployment
+
+After applying all changes:
+
+Verify the live version is reachable at https://toolsmith.app/
+
+Run:
+
+npm run build && npm run start
+
+
+Then test again on:
+
+Google PageSpeed Insights
+
+Search Console → URL Inspection → Request Indexing
+
+🎯 Goal
+
+The goal is to make Toolsmith.app:
+
+Fully indexable on Google
+
+Pass Core Web Vitals (especially LCP < 2.5s, FCP < 1.8s)
+
+Have valid sitemap, canonical tags, meta descriptions, and SEO structure
+
+Ready for AdSense review and ranking improvements
