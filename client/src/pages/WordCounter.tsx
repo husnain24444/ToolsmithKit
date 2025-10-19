@@ -23,6 +23,58 @@ export default function WordCounter() {
       keywords: "word counter, character counter, word count, character count, text counter, sentence counter, paragraph counter, essay word count",
     });
 
+    // Add FAQ structured data for rich snippets
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a word counter tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A word counter is an online tool that automatically counts the number of words, characters, sentences, and paragraphs in your text. It helps writers and students track their writing progress and meet specific length requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate is this word counter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our word counter is highly accurate and uses standard word counting algorithms. It counts words by splitting text on whitespace characters, which is the same method used by popular word processors like Microsoft Word and Google Docs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this tool count characters with or without spaces?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our tool provides both! You can see the total character count (including spaces) and the character count without spaces. This is useful for different platforms that have varying character limit rules."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my text stored or saved anywhere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, your privacy is protected. All text processing happens in your browser. We do not store, save, or transmit your text to any server. Your content remains completely private and secure."
+          }
+        }
+      ]
+    };
+
+    // Add FAQ schema to page
+    const existingFAQScript = document.querySelector('script[data-schema-type="faq"]');
+    if (existingFAQScript) {
+      existingFAQScript.textContent = JSON.stringify(faqSchema);
+    } else {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.setAttribute('data-schema-type', 'faq');
+      script.textContent = JSON.stringify(faqSchema);
+      document.head.appendChild(script);
+    }
+
     addRecentTool({
       href: "/tools/word-counter",
       label: "Word Counter",
@@ -229,7 +281,7 @@ export default function WordCounter() {
               <h3 className="text-xl font-semibold text-foreground dark:text-foreground mt-6 mb-3">
                 Key Features:
               </h3>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground dark:text-muted-foreground">
+              <ul className="list-disc list-inside space-y-2 text-muted-foreground dark:text-muted-foreground mb-6">
                 <li>Real-time word counting as you type</li>
                 <li>Character count with and without spaces</li>
                 <li>Sentence and paragraph counting</li>
@@ -237,6 +289,114 @@ export default function WordCounter() {
                 <li>Speaking time estimation (130 words/minute)</li>
                 <li>Line count for code or formatted text</li>
               </ul>
+
+              <h3 className="text-xl font-semibold text-foreground dark:text-foreground mt-6 mb-3">
+                Who Uses Word Counter?
+              </h3>
+              <p className="text-muted-foreground dark:text-muted-foreground mb-3">
+                Our word counter tool is perfect for various professionals and students:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-muted-foreground dark:text-muted-foreground mb-6">
+                <li><strong>Students:</strong> Track essay and assignment word counts to meet academic requirements</li>
+                <li><strong>Writers & Bloggers:</strong> Monitor article length for SEO optimization and readability</li>
+                <li><strong>Content Marketers:</strong> Ensure content meets platform-specific character limits</li>
+                <li><strong>Social Media Managers:</strong> Verify posts stay within character limits for Twitter, Facebook, etc.</li>
+                <li><strong>Copywriters:</strong> Track ad copy and meta description lengths</li>
+                <li><strong>Translators:</strong> Calculate word counts for pricing and project estimation</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-foreground dark:text-foreground mt-6 mb-3">
+                How to Use the Word Counter
+              </h3>
+              <ol className="list-decimal list-inside space-y-2 text-muted-foreground dark:text-muted-foreground mb-6">
+                <li>Type or paste your text into the text area above</li>
+                <li>Watch the statistics update automatically as you type</li>
+                <li>View word count, character count, sentences, and paragraphs</li>
+                <li>Check estimated reading and speaking times</li>
+                <li>Use the Copy button to copy your text to clipboard</li>
+                <li>Click Clear to start fresh with new text</li>
+              </ol>
+
+              <h3 className="text-xl font-semibold text-foreground dark:text-foreground mt-6 mb-3">
+                Why Accurate Word Counting Matters
+              </h3>
+              <p className="text-muted-foreground dark:text-muted-foreground mb-6">
+                Accurate word counting is essential for meeting writing requirements, optimizing content for SEO, 
+                staying within platform limits, and professional communication. Our tool uses precise algorithms 
+                to count words, characters, and sentences, ensuring you get reliable statistics every time.
+              </p>
+            </div>
+          </Card>
+
+          {/* FAQ Section */}
+          <Card className="p-6 mt-8">
+            <h2 className="text-2xl font-semibold text-foreground dark:text-foreground mb-6">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold text-foreground dark:text-foreground mb-2">
+                  What is a word counter tool?
+                </h3>
+                <p className="text-muted-foreground dark:text-muted-foreground">
+                  A word counter is an online tool that automatically counts the number of words, characters, sentences, 
+                  and paragraphs in your text. It helps writers and students track their writing progress and meet specific 
+                  length requirements.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-foreground dark:text-foreground mb-2">
+                  How accurate is this word counter?
+                </h3>
+                <p className="text-muted-foreground dark:text-muted-foreground">
+                  Our word counter is highly accurate and uses standard word counting algorithms. It counts words by 
+                  splitting text on whitespace characters, which is the same method used by popular word processors 
+                  like Microsoft Word and Google Docs.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-foreground dark:text-foreground mb-2">
+                  Does this tool count characters with or without spaces?
+                </h3>
+                <p className="text-muted-foreground dark:text-muted-foreground">
+                  Our tool provides both! You can see the total character count (including spaces) and the character 
+                  count without spaces. This is useful for different platforms that have varying character limit rules.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-foreground dark:text-foreground mb-2">
+                  What is the average reading time calculation based on?
+                </h3>
+                <p className="text-muted-foreground dark:text-muted-foreground">
+                  Reading time is calculated at an average reading speed of 200 words per minute, which is the typical 
+                  reading speed for adults. Speaking time is based on 130 words per minute, the average speaking pace 
+                  for presentations.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-foreground dark:text-foreground mb-2">
+                  Is my text stored or saved anywhere?
+                </h3>
+                <p className="text-muted-foreground dark:text-muted-foreground">
+                  No, your privacy is protected. All text processing happens in your browser. We do not store, save, 
+                  or transmit your text to any server. Your content remains completely private and secure.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-foreground dark:text-foreground mb-2">
+                  Can I use this for academic writing?
+                </h3>
+                <p className="text-muted-foreground dark:text-muted-foreground">
+                  Absolutely! This tool is perfect for students working on essays, research papers, and assignments with 
+                  specific word count requirements. It helps ensure you meet minimum or maximum word limits set by your 
+                  professors or institutions.
+                </p>
+              </div>
             </div>
           </Card>
 
