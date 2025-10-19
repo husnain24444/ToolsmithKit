@@ -11,7 +11,7 @@ interface RelatedTool {
 
 interface RelatedToolsProps {
   currentTool: string;
-  category: "finance" | "developer";
+  category: "finance" | "developer" | "general";
 }
 
 const financeTools: RelatedTool[] = [
@@ -30,8 +30,16 @@ const developerTools: RelatedTool[] = [
   { href: "/tools/url-encoder", label: "URL Encoder", description: "Encode/decode URLs" },
 ];
 
+const generalTools: RelatedTool[] = [
+  { href: "/tools/word-counter", label: "Word Counter", description: "Count words, characters & more" },
+  { href: "/tools/password-generator", label: "Password Generator", description: "Generate secure passwords" },
+  { href: "/tools/qr-code-generator", label: "QR Code Generator", description: "Create QR codes instantly" },
+  { href: "/tools/percentage-calculator", label: "Percentage Calculator", description: "Calculate percentages easily" },
+  { href: "/tools/age-calculator", label: "Age Calculator", description: "Calculate age accurately" },
+];
+
 export default function RelatedTools({ currentTool, category }: RelatedToolsProps) {
-  const tools = category === "finance" ? financeTools : developerTools;
+  const tools = category === "finance" ? financeTools : category === "developer" ? developerTools : generalTools;
   const relatedTools = tools.filter((tool) => tool.href !== currentTool).slice(0, 3);
 
   if (relatedTools.length === 0) {

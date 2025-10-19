@@ -1,7 +1,7 @@
 export interface RecentTool {
   href: string;
   label: string;
-  category: "finance" | "developer";
+  category: "finance" | "developer" | "general";
   timestamp: number;
 }
 
