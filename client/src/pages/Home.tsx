@@ -16,6 +16,7 @@ export default function Home() {
       title: "ToolsHub - Free Online Tools for Finance & Development | EMI Calculator, JSON Formatter",
       description: "Professional online tools including EMI/Loan Calculator and JSON Formatter & Validator. Free, fast, and SEO-optimized utilities for finance and development.",
       keywords: "EMI calculator, loan calculator, JSON formatter, JSON validator, online tools, finance calculator, developer tools",
+      url: "https://toolsmith.app/",
     });
   }, []);
 
