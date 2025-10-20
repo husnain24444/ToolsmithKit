@@ -131,3 +131,11 @@ Based on updated PageSpeed Insights showing 1,200ms render-blocking resources:
 [x] 5. Added comprehensive FAQ section with 6 common questions and answers
 [x] 6. Implemented FAQ structured data (Schema.org FAQPage) for Google rich snippets
 [x] 7. Verified all changes working correctly - app running without errors
+
+## Canonical URL Fix - Homepage Duplicate Issue (Oct 20, 2025)
+[x] 1. Added static canonical tag to index.html pointing to https://toolsmith.app/
+[x] 2. Added robots meta tag ("index, follow") for proper indexing control
+[x] 3. Updated Home.tsx to explicitly set canonical URL to https://toolsmith.app/
+[x] 4. Ensured consistent canonical signals without relying on window.location.href
+[x] 5. Avoided server-side redirects that would break SPA routing
+[x] 6. Architect reviewed and approved - canonical implementation correct for SPA
