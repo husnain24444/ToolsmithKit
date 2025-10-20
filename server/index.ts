@@ -16,17 +16,6 @@ app.use(express.json({
 }));
 app.use(express.urlencoded({ extended: false }));
 
-// Canonical URL enforcement middleware
-app.use((req, res, next) => {
-  // Remove trailing slashes (except for root /)
-  if (req.path !== '/' && req.path.endsWith('/')) {
-    const query = req.url.slice(req.path.length);
-    const redirectPath = req.path.slice(0, -1) + query;
-    return res.redirect(301, redirectPath);
-  }
-  next();
-});
-
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
