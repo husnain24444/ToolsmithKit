@@ -15,8 +15,8 @@ import { HelpCircle } from "lucide-react";
 export default function FAQ() {
   useEffect(() => {
     setSEO({
-      title: "Frequently Asked Questions - ToolsHub FAQ | Online Tools Help",
-      description: "Find answers to common questions about ToolsHub's financial and developer tools. Learn how to use EMI calculators, JSON formatters, and more.",
+      title: "Frequently Asked Questions - toolsmith FAQ | Online Tools Help",
+      description: "Find answers to common questions about toolsmith's financial and developer tools. Learn how to use EMI calculators, JSON formatters, and more.",
       keywords: "FAQ, help, support, questions, how to use, calculator help, tool guide",
     });
   }, []);
@@ -45,9 +45,9 @@ export default function FAQ() {
             <h2 className="text-2xl font-semibold text-foreground dark:text-foreground mb-6">General Questions</h2>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
-                <AccordionTrigger className="text-left">What is ToolsHub?</AccordionTrigger>
+                <AccordionTrigger className="text-left">What is toolsmith?</AccordionTrigger>
                 <AccordionContent className="text-muted-foreground dark:text-muted-foreground">
-                  ToolsHub is a free online platform providing professional-grade tools for financial calculations and development tasks. All tools are web-based, requiring no installation or registration.
+                  toolsmith is a free online platform providing professional-grade tools for financial calculations and development tasks. All tools are web-based, requiring no installation or registration.
                 </AccordionContent>
               </AccordionItem>
 
@@ -167,7 +167,7 @@ export default function FAQ() {
               <AccordionItem value="tech-1">
                 <AccordionTrigger className="text-left">Which browsers are supported?</AccordionTrigger>
                 <AccordionContent className="text-muted-foreground dark:text-muted-foreground">
-                  ToolsHub works on all modern browsers including Chrome, Firefox, Safari, Edge, and Opera. We recommend keeping your browser updated for the best experience.
+                  toolsmith works on all modern browsers including Chrome, Firefox, Safari, Edge, and Opera. We recommend keeping your browser updated for the best experience.
                 </AccordionContent>
               </AccordionItem>
 

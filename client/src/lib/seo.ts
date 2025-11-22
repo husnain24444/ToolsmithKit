@@ -43,7 +43,7 @@ export function setSEO({
   addStructuredData({
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "ToolsHub",
+    name: "toolsmith",
     description: description,
     url: url,
     applicationCategory: "UtilitiesApplication",

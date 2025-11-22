@@ -19,7 +19,7 @@ export default function QRCodeGenerator() {
 
   useEffect(() => {
     setSEO({
-      title: "QR Code Generator - Create Free QR Codes Online | ToolsHub",
+      title: "QR Code Generator - Create Free QR Codes Online | toolsmith",
       description: "Generate QR codes instantly for URLs, text, contact information, and more. Free online QR code generator with download option. Create QR codes in seconds.",
       keywords: "QR code generator, create QR code, QR code maker, generate QR code, free QR code, QR code creator, barcode generator",
     });

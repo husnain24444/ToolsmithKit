@@ -4,12 +4,12 @@ import { useEffect } from "react";
 
 export default function AboutUs() {
   useEffect(() => {
-    document.title = "About Us - ToolsHub | Free Online Tools Platform";
+    document.title = "About Us - toolsmith | Free Online Tools Platform";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Learn about ToolsHub - your trusted platform for free online tools including EMI calculators, JSON formatters, and more. Discover our mission to simplify your digital tasks."
+        "Learn about toolsmith - your trusted platform for free online tools including EMI calculators, JSON formatters, and more. Discover our mission to simplify your digital tasks."
       );
     }
   }, []);
@@ -19,14 +19,14 @@ export default function AboutUs() {
       <Header />
       <main className="flex-1 container mx-auto px-4 py-12 max-w-4xl">
         <h1 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white" data-testid="heading-about">
-          About ToolsHub
+          About toolsmith
         </h1>
 
         <div className="prose prose-lg dark:prose-invert max-w-none">
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Who We Are</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              ToolsHub is a free online tools platform designed to make your life easier. We provide a 
+              toolsmith is a free online tools platform designed to make your life easier. We provide a 
               comprehensive suite of professional-grade utilities that help you with everyday tasks—from 
               financial calculations to developer tools—all accessible directly from your browser.
             </p>
@@ -57,14 +57,14 @@ export default function AboutUs() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Why We Built ToolsHub</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Why We Built toolsmith</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               We noticed that many online tools platforms are cluttered with ads, require unnecessary 
               registrations, or charge fees for basic functionality. We wanted to create a better 
               alternative—a clean, modern platform where you can access professional tools instantly.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Every tool on ToolsHub is designed with simplicity and effectiveness in mind. Whether you're 
+              Every tool on toolsmith is designed with simplicity and effectiveness in mind. Whether you're 
               a student calculating loan payments, a developer formatting code, or a professional needing 
               quick calculations, our tools are built for you.
             </p>
@@ -73,7 +73,7 @@ export default function AboutUs() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Our Tools</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Currently, ToolsHub offers:
+              Currently, toolsmith offers:
             </p>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mb-4 space-y-2">
               <li><strong>EMI/Loan Calculator:</strong> Calculate your monthly loan payments with detailed 
@@ -87,13 +87,13 @@ export default function AboutUs() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Our Commitment to You</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              We're dedicated to maintaining ToolsHub as a trusted resource for online tools. Your privacy 
+              We're dedicated to maintaining toolsmith as a trusted resource for online tools. Your privacy 
               is our priority—we don't collect personal data, and all calculations happen securely in your 
               browser. We're constantly working to improve our existing tools and develop new ones based on 
               your needs.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Thank you for choosing ToolsHub. We're here to make your digital tasks simpler, faster, and 
+              Thank you for choosing toolsmith. We're here to make your digital tasks simpler, faster, and 
               completely free.
             </p>
           </section>

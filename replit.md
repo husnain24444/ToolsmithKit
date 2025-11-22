@@ -1,8 +1,8 @@
-# ToolsHub - Online Tools Platform
+# toolsmith - Online Tools Platform
 
 ## Overview
 
-ToolsHub is a web-based platform providing free online utility tools for finance and development tasks. The application features an EMI/Loan Calculator and a JSON Formatter/Validator, built with a modern React frontend and Express backend. The architecture emphasizes SEO optimization, mobile responsiveness, and user-friendly interfaces with a clean, professional design system.
+toolsmith is a web-based platform providing free online utility tools for finance and development tasks. The application features an EMI/Loan Calculator and a JSON Formatter/Validator, built with a modern React frontend and Express backend. The architecture emphasizes SEO optimization, mobile responsiveness, and user-friendly interfaces with a clean, professional design system.
 
 ## User Preferences
 

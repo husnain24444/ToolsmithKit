@@ -31,7 +31,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-bold text-primary mb-4">ToolsHub</h3>
+            <h3 className="text-xl font-bold text-primary mb-4">toolsmith</h3>
             <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
               Professional online tools for finance calculations and development tasks.
               Free, fast, and reliable.
@@ -58,7 +58,7 @@ export default function Footer() {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="mailto:contact@toolshub.com"
+                href="mailto:contact@toolsmith.com"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Email"
                 data-testid="link-email"
@@ -143,7 +143,7 @@ export default function Footer() {
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground text-center md:text-left">
-            &copy; 2024 ToolsHub. All rights reserved. Built with React and TailwindCSS.
+            &copy; 2024 toolsmith. All rights reserved. Built with React and TailwindCSS.
           </p>
           <button
             onClick={scrollToTop}

@@ -69,7 +69,7 @@ export default function TaxCalculator() {
 
   useEffect(() => {
     setSEO({
-      title: "Income Tax Calculator - Calculate Tax Online | ToolsHub",
+      title: "Income Tax Calculator - Calculate Tax Online | toolsmith",
       description: "Free online income tax calculator for India. Calculate your tax liability under old and new tax regimes with accurate projections.",
       keywords: "income tax calculator, tax calculator India, new tax regime, old tax regime, tax planning",
     });

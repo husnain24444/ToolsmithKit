@@ -47,7 +47,7 @@ export default function SIPCalculator() {
 
   useEffect(() => {
     setSEO({
-      title: "SIP Calculator - Calculate Mutual Fund Returns | ToolsHub",
+      title: "SIP Calculator - Calculate Mutual Fund Returns | toolsmith",
       description: "Free online SIP calculator. Calculate returns on your systematic investment plan, see wealth growth over time with detailed projections.",
       keywords: "SIP calculator, systematic investment plan, mutual fund calculator, investment calculator, SIP returns",
     });

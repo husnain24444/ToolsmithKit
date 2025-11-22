@@ -39,7 +39,7 @@ export default function FDCalculator() {
 
   useEffect(() => {
     setSEO({
-      title: "FD Calculator - Calculate Fixed Deposit Returns | ToolsHub",
+      title: "FD Calculator - Calculate Fixed Deposit Returns | toolsmith",
       description: "Free online fixed deposit calculator. Calculate maturity amount and interest earned on your FD investments with accurate projections.",
       keywords: "FD calculator, fixed deposit calculator, FD maturity calculator, interest calculator, bank FD",
     });

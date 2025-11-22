@@ -34,7 +34,7 @@ export default function HashGenerator() {
 
   useEffect(() => {
     setSEO({
-      title: "Hash Generator - Generate SHA-1, SHA-256, SHA-512 Hashes | ToolsHub",
+      title: "Hash Generator - Generate SHA-1, SHA-256, SHA-512 Hashes | toolsmith",
       description: "Free online hash generator. Generate SHA-1, SHA-256, SHA-384, and SHA-512 hashes instantly in your browser. Secure and private.",
       keywords: "hash generator, SHA-1, SHA-256, SHA-512, hash calculator, checksum generator, cryptographic hash",
     });

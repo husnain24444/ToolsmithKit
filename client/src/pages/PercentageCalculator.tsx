@@ -18,7 +18,7 @@ export default function PercentageCalculator() {
 
   useEffect(() => {
     setSEO({
-      title: "Percentage Calculator - Calculate Percentages Online | ToolsHub",
+      title: "Percentage Calculator - Calculate Percentages Online | toolsmith",
       description: "Free percentage calculator for all your percentage needs. Calculate percentage of a number, percentage change, increase, decrease, and more. Fast and accurate results.",
       keywords: "percentage calculator, percent calculator, percentage of, percentage change, percentage increase, percentage decrease, calculate percentage",
     });

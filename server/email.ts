@@ -29,7 +29,7 @@ export async function sendContactEmail(data: ContactEmailData): Promise<void> {
   const { name, email, message } = data;
 
   const mailOptions = {
-    from: `"ToolsHub Contact Form" <${process.env.EMAIL_USER}>`,
+    from: `"toolsmith Contact Form" <${process.env.EMAIL_USER}>`,
     to: process.env.EMAIL_USER,
     replyTo: email,
     subject: `New Contact Form Message from ${name}`,
@@ -59,7 +59,7 @@ ${message}
         </div>
         
         <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 12px;">
-          <p>This message was sent from the ToolsHub contact form.</p>
+          <p>This message was sent from the toolsmith contact form.</p>
           <p>Reply directly to this email to respond to ${name}.</p>
         </div>
       </div>

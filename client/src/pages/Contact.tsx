@@ -31,12 +31,12 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-    document.title = "Contact Us - ToolsHub | Get in Touch";
+    document.title = "Contact Us - toolsmith | Get in Touch";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Contact ToolsHub for support, feedback, or inquiries. We're here to help you with our free online tools including calculators and developer utilities."
+        "Contact toolsmith for support, feedback, or inquiries. We're here to help you with our free online tools including calculators and developer utilities."
       );
     }
   }, []);

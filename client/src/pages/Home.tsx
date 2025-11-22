@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 export default function Home() {
   useEffect(() => {
     setSEO({
-      title: "ToolsHub - Free Online Tools for Finance & Development | EMI Calculator, JSON Formatter",
+      title: "Toolsmith - Free Online Tools for Finance & Development | EMI Calculator, JSON Formatter",
       description: "Professional online tools including EMI/Loan Calculator and JSON Formatter & Validator. Free, fast, and SEO-optimized utilities for finance and development.",
       keywords: "EMI calculator, loan calculator, JSON formatter, JSON validator, online tools, finance calculator, developer tools",
       url: "https://toolsmith.app/",
@@ -58,9 +58,9 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/5 dark:from-primary/10 to-accent/5 dark:to-accent/10 py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground dark:text-foreground mb-6">
+          <h3 className="text-4xl md:text-6xl font-bold text-foreground dark:text-foreground mb-6">
             Professional Online Tools
-          </h2>
+          </h3>
           <p className="text-xl text-foreground/80 dark:text-foreground/90 mb-8 max-w-2xl mx-auto">
             Free, fast, and reliable tools for finance calculations and development tasks.
             SEO-optimized and mobile-friendly.
@@ -86,7 +86,7 @@ export default function Home() {
       <section id="tools" className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground dark:text-foreground mb-4">Featured Tools</h2>
+            <h3 className="text-3xl md:text-4xl font-bold text-foreground dark:text-foreground mb-4">Featured Tools</h3>
             <p className="text-lg text-foreground/70 dark:text-foreground/80 max-w-2xl mx-auto">
               Powerful calculators and formatters designed for professionals and enthusiasts
             </p>
@@ -291,7 +291,7 @@ export default function Home() {
       <section id="features" className="py-16 bg-muted/30 dark:bg-muted/10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground dark:text-foreground mb-4">Why Choose ToolsHub?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground dark:text-foreground mb-4">Why Choose toolsmith?</h2>
             <p className="text-lg text-muted-foreground dark:text-muted-foreground max-w-2xl mx-auto">
               Built with modern web technologies for speed, accuracy, and user experience
             </p>

@@ -54,7 +54,7 @@ export default function CompoundInterestCalculator() {
 
   useEffect(() => {
     setSEO({
-      title: "Compound Interest Calculator - Calculate Investment Returns | ToolsHub",
+      title: "Compound Interest Calculator - Calculate Investment Returns | toolsmith",
       description: "Free online compound interest calculator. Calculate future value, total interest, and investment growth with different compounding frequencies.",
       keywords: "compound interest calculator, investment calculator, FD calculator, savings calculator, interest calculator",
     });

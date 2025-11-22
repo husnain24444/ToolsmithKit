@@ -18,7 +18,7 @@ export default function URLEncoder() {
 
   useEffect(() => {
     setSEO({
-      title: "URL Encoder/Decoder - Encode & Decode URLs Online | ToolsHub",
+      title: "URL Encoder/Decoder - Encode & Decode URLs Online | toolsmith",
       description: "Free online URL encoder and decoder tool. Encode special characters for URLs or decode URL-encoded strings instantly.",
       keywords: "URL encoder, URL decoder, encode URL, decode URL, percent encoding, URL escape",
     });

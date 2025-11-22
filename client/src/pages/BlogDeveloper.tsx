@@ -11,7 +11,7 @@ import { Calendar, User, ArrowRight } from "lucide-react";
 export default function BlogDeveloper() {
   useEffect(() => {
     setSEO({
-      title: "Essential Developer Tools: JSON, Base64, and Hashing Guide | ToolsHub Blog",
+      title: "Essential Developer Tools: JSON, Base64, and Hashing Guide | toolsmith Blog",
       description: "Master essential developer tools including JSON formatting, Base64 encoding, and cryptographic hashing. Practical guides and best practices for developers.",
       keywords: "developer tools, JSON formatter, Base64 encoding, hash functions, web development, programming tools",
     });
@@ -39,7 +39,7 @@ export default function BlogDeveloper() {
               </div>
               <div className="flex items-center gap-2">
                 <User className="w-4 h-4" />
-                <span>ToolsHub Team</span>
+                <span>toolsmith Team</span>
               </div>
             </div>
           </div>

@@ -42,7 +42,7 @@ export default function ROICalculator() {
 
   useEffect(() => {
     setSEO({
-      title: "ROI Calculator - Calculate Return on Investment | ToolsHub",
+      title: "ROI Calculator - Calculate Return on Investment | toolsmith",
       description: "Free online ROI calculator. Calculate return on investment, net profit, and investment performance with detailed breakdowns.",
       keywords: "ROI calculator, return on investment, profit calculator, investment return calculator, business calculator",
     });

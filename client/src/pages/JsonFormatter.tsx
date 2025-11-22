@@ -23,7 +23,7 @@ export default function JsonFormatter() {
 
   useEffect(() => {
     setSEO({
-      title: "JSON Formatter & Validator - Online JSON Beautifier | ToolsHub",
+      title: "JSON Formatter & Validator - Online JSON Beautifier | toolsmith",
       description: "Free online JSON formatter and validator. Format, validate, minify, and beautify JSON data with syntax highlighting. Copy or download formatted JSON instantly.",
       keywords: "JSON formatter, JSON validator, JSON beautifier, JSON minify, JSON parser, format JSON online",
     });

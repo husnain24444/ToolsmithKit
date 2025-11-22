@@ -4,12 +4,12 @@ import { useEffect } from "react";
 
 export default function PrivacyPolicy() {
   useEffect(() => {
-    document.title = "Privacy Policy - ToolsHub | Your Data Privacy Matters";
+    document.title = "Privacy Policy - toolsmith | Your Data Privacy Matters";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Read ToolsHub's privacy policy to understand how we protect your data. We prioritize user privacy with no personal data collection and browser-based calculations."
+        "Read toolsmith's privacy policy to understand how we protect your data. We prioritize user privacy with no personal data collection and browser-based calculations."
       );
     }
   }, []);
@@ -29,12 +29,12 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">1. Introduction</h2>
             <p className="text-gray-700 dark:text-gray-300">
-              Welcome to ToolsHub ("we," "our," or "us"). We are committed to protecting your privacy and 
+              Welcome to toolsmith ("we," "our," or "us"). We are committed to protecting your privacy and 
               ensuring you have a positive experience when using our online tools platform. This Privacy 
               Policy explains how we collect, use, and safeguard your information when you visit our website.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
-              By using ToolsHub, you agree to the collection and use of information in accordance with this policy.
+              By using toolsmith, you agree to the collection and use of information in accordance with this policy.
             </p>
           </section>
 
@@ -93,7 +93,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">5. Data Storage and Processing</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              <strong>Important:</strong> All calculations and data processing on ToolsHub happen directly in 
+              <strong>Important:</strong> All calculations and data processing on toolsmith happen directly in 
               your browser. This means:
             </p>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mb-4 space-y-2">

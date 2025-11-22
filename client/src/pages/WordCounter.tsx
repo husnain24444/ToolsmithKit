@@ -18,7 +18,7 @@ export default function WordCounter() {
 
   useEffect(() => {
     setSEO({
-      title: "Word Counter - Count Words, Characters, Sentences & Paragraphs Online | ToolsHub",
+      title: "Word Counter - Count Words, Characters, Sentences & Paragraphs Online | toolsmith",
       description: "Free online word counter tool. Count words, characters, sentences, and paragraphs instantly. Perfect for essays, articles, and content writing with real-time statistics.",
       keywords: "word counter, character counter, word count, character count, text counter, sentence counter, paragraph counter, essay word count",
     });

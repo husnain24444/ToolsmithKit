@@ -4,12 +4,12 @@ import { useEffect } from "react";
 
 export default function TermsOfService() {
   useEffect(() => {
-    document.title = "Terms of Service - ToolsHub | Legal Terms & Conditions";
+    document.title = "Terms of Service - toolsmith | Legal Terms & Conditions";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Read ToolsHub's terms of service and conditions of use. Understand your rights and responsibilities when using our free online tools and calculators."
+        "Read toolsmith's terms of service and conditions of use. Understand your rights and responsibilities when using our free online tools and calculators."
       );
     }
   }, []);
@@ -29,7 +29,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">1. Acceptance of Terms</h2>
             <p className="text-gray-700 dark:text-gray-300">
-              Welcome to ToolsHub. By accessing or using our website and online tools (collectively, the "Services"), 
+              Welcome to toolsmith. By accessing or using our website and online tools (collectively, the "Services"), 
               you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please 
               do not use our Services.
             </p>
@@ -42,7 +42,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">2. Description of Services</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              ToolsHub provides free online utility tools, including but not limited to:
+              toolsmith provides free online utility tools, including but not limited to:
             </p>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mb-4 space-y-2">
               <li>EMI/Loan Calculators for financial planning</li>
@@ -74,8 +74,8 @@ export default function TermsOfService() {
             <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">4. Intellectual Property Rights</h2>
             <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">4.1 Our Content</h3>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              All content on ToolsHub, including but not limited to text, graphics, logos, code, and software, 
-              is the property of ToolsHub or its content suppliers and is protected by international copyright, 
+              All content on toolsmith, including but not limited to text, graphics, logos, code, and software, 
+              is the property of toolsmith or its content suppliers and is protected by international copyright, 
               trademark, and other intellectual property laws.
             </p>
 
@@ -122,7 +122,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">6. Limitation of Liability</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              TO THE MAXIMUM EXTENT PERMITTED BY LAW, TOOLSHUB SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, 
+              TO THE MAXIMUM EXTENT PERMITTED BY LAW, toolsmith SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, 
               SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED 
               DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES.
             </p>
@@ -140,7 +140,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">7. Indemnification</h2>
             <p className="text-gray-700 dark:text-gray-300">
-              You agree to indemnify, defend, and hold harmless ToolsHub, its officers, directors, employees, and 
+              You agree to indemnify, defend, and hold harmless toolsmith, its officers, directors, employees, and 
               agents from any claims, liabilities, damages, losses, and expenses (including legal fees) arising 
               out of or in any way connected with your access to or use of the Services, your violation of these 
               Terms, or your violation of any rights of another party.
@@ -151,8 +151,8 @@ export default function TermsOfService() {
             <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">8. Third-Party Links and Services</h2>
             <p className="text-gray-700 dark:text-gray-300">
               Our Services may contain links to third-party websites or services that are not owned or controlled 
-              by ToolsHub. We have no control over and assume no responsibility for the content, privacy policies, 
-              or practices of any third-party websites or services. You acknowledge and agree that ToolsHub shall 
+              by toolsmith. We have no control over and assume no responsibility for the content, privacy policies, 
+              or practices of any third-party websites or services. You acknowledge and agree that toolsmith shall 
               not be liable for any damage or loss caused by your use of any third-party content or services.
             </p>
           </section>
@@ -188,7 +188,7 @@ export default function TermsOfService() {
             <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">11. Governing Law and Jurisdiction</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in 
-              which ToolsHub operates, without regard to its conflict of law provisions.
+              which toolsmith operates, without regard to its conflict of law provisions.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
               Any disputes arising from these Terms or your use of the Services shall be subject to the exclusive 
@@ -219,7 +219,7 @@ export default function TermsOfService() {
             <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">14. Entire Agreement</h2>
             <p className="text-gray-700 dark:text-gray-300">
               These Terms, together with our Privacy Policy, constitute the entire agreement between you and 
-              ToolsHub regarding the use of our Services and supersede all prior agreements and understandings.
+              toolsmith regarding the use of our Services and supersede all prior agreements and understandings.
             </p>
           </section>
 

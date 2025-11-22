@@ -28,7 +28,7 @@ export default function AgeCalculator() {
 
   useEffect(() => {
     setSEO({
-      title: "Age Calculator - Calculate Your Exact Age Online | ToolsHub",
+      title: "Age Calculator - Calculate Your Exact Age Online | toolsmith",
       description: "Free online age calculator. Calculate your exact age in years, months, days, and more. Find out days until your next birthday and other fun age statistics.",
       keywords: "age calculator, calculate age, age in days, age in months, how old am I, birthday calculator, days until birthday",
     });

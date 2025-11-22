@@ -24,7 +24,7 @@ export default function LoanCalculator() {
 
   useEffect(() => {
     setSEO({
-      title: "EMI Calculator - Calculate Loan EMI Online | ToolsHub",
+      title: "EMI Calculator - Calculate Loan EMI Online | toolsmith",
       description: "Free online EMI calculator. Calculate monthly loan payments, total interest, and view detailed amortization schedules. Supports home loans, car loans, and personal loans.",
       keywords: "EMI calculator, loan calculator, home loan EMI, car loan calculator, personal loan EMI, interest calculator",
     });

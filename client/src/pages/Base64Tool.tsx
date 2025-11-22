@@ -18,7 +18,7 @@ export default function Base64Tool() {
 
   useEffect(() => {
     setSEO({
-      title: "Base64 Encoder/Decoder - Free Online Tool | ToolsHub",
+      title: "Base64 Encoder/Decoder - Free Online Tool | toolsmith",
       description: "Free online Base64 encoder and decoder. Convert text to Base64 and decode Base64 strings instantly in your browser.",
       keywords: "base64 encoder, base64 decoder, base64 converter, encode base64, decode base64, online encoder",
     });

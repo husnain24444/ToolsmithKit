@@ -11,7 +11,7 @@ import { Calendar, User, ArrowRight } from "lucide-react";
 export default function BlogFinance() {
   useEffect(() => {
     setSEO({
-      title: "Smart Financial Planning: EMI & Investment Strategies | ToolsHub Blog",
+      title: "Smart Financial Planning: EMI & Investment Strategies | toolsmith Blog",
       description: "Learn about EMI calculations, compound interest strategies, and smart investment planning. Expert financial tips and calculator usage guides.",
       keywords: "financial planning, EMI strategies, investment tips, compound interest, loan management, financial literacy",
     });
@@ -39,7 +39,7 @@ export default function BlogFinance() {
               </div>
               <div className="flex items-center gap-2">
                 <User className="w-4 h-4" />
-                <span>ToolsHub Team</span>
+                <span>toolsmith Team</span>
               </div>
             </div>
           </div>

@@ -25,7 +25,7 @@ export default function PasswordGenerator() {
 
   useEffect(() => {
     setSEO({
-      title: "Password Generator - Create Strong & Secure Passwords Online | ToolsHub",
+      title: "Password Generator - Create Strong & Secure Passwords Online | toolsmith",
       description: "Generate strong, random, and secure passwords instantly. Customize length and character types for maximum security. Free online password generator tool.",
       keywords: "password generator, random password, strong password, secure password, password creator, password maker, generate password",
     });
