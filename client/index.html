@@ -3,12 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
+
+    <link rel="preload" href="/src/main.tsx" as="script">
+    <link rel="preload" href="/favicon-32x32.webp" as="image">
+    <link rel="preload" as="image" href="/hero-image.webp">
+    <link rel="modulepreload" href="/src/main.tsx">
+
+
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
+    <link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp">
     <link rel="manifest" href="/site.webmanifest">
+
+    <script>
+  (function() {
+    const theme = localStorage.getItem("theme") || "light";
+    document.documentElement.classList.add(theme);
+  })();
+</script>
+
 
     <script>(function(s){s.dataset.zone='10219953',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
     <title>toolsmith - Free Online Tools for Finance & Development | EMI Calculator, JSON Formatter</title>
@@ -27,6 +42,7 @@
     <link rel="canonical" href="https://toolsmith.app/" />
     <meta name="robots" content="index, follow" />
 
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1064418449699167"
      crossorigin="anonymous"></script>
     <meta name="google-adsense-account" content="ca-pub-1064418449699167">
@@ -35,7 +51,9 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"> -->
+     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
   </head>
   <body>
