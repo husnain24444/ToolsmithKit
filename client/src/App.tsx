@@ -8,7 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import { useEffect, useState, lazy, Suspense, type ReactNode } from "react";
 
 const NotFound = lazy(() => import("@/pages/not-found"));
-const Home = lazy(() => import("@/pages/Home"));
+import Home from "@/pages/Home";
 const LoanCalculator = lazy(() => import("@/pages/LoanCalculator"));
 const SIPCalculator = lazy(() => import("@/pages/SIPCalculator"));
 const FDCalculator = lazy(() => import("@/pages/FDCalculator"));
