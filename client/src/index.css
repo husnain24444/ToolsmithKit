@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* stylelint-disable at-rule-no-unknown */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+/* stylelint-enable at-rule-no-unknown */
 
 :root {
   --background: hsl(210, 40%, 98%);
@@ -78,11 +80,17 @@
 
 @layer base {
   * {
-    @apply border-border;
+    box-sizing: border-box;
+    /* set default border color for elements that have borders */
+    border-color: var(--border);
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--background);
+    color: var(--foreground);
   }
 
   .json-container {
